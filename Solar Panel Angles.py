@@ -3,7 +3,7 @@ from datetime import datetime
 
 current_date = input("Date: ")
 current_latitude = int(input("Enter latitude: "))
-
+#change
 
 current_date = datetime.strptime(current_date, '%m-%d-%y')
 julian_current_day = current_date.timetuple()
