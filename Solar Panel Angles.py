@@ -3,7 +3,6 @@ from datetime import datetime
 
 current_date = input("Date: ")
 current_latitude = int(input("Enter latitude: "))
-#change
 
 current_date = datetime.strptime(current_date, '%m-%d-%y')
 julian_current_day = current_date.timetuple()
@@ -23,8 +22,15 @@ angle_of_sun = math.sin(math.radians((360*julian_spring_day)/365.25))
 solar_declination = max_solar_degrees*angle_of_sun
 angle_of_panel = current_latitude - solar_declination
 print(f"\nAngle of solar panels should be {angle_of_panel} degrees.\n")
+<<<<<<< HEAD
+
+# To determine the length of the support 
+
+
+=======
 
 #figure length of support in inches
 length_of_solar_panel = 22
 length_of_support = length_of_solar_panel / math.sin(math.radians(angle_of_panel))
 print(f"length of support for 22 inch solar panel: {length_of_support} inches.")
+>>>>>>> 982638b67d6b64a6240d99b3bdb606cb67013a13
