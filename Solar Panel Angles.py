@@ -24,5 +24,5 @@ print(f"\nAngle of solar panels should be {angle_of_panel} degrees.\n")
 
 #figure length of support in inches
 length_of_solar_panel = 22
-length_of_support = length_of_solar_panel / math.sin(math.radians(angle_of_panel))
+length_of_support = length_of_solar_panel * math.tan(math.radians(angle_of_panel))
 print(f"length of support for 22 inch solar panel: {length_of_support} inches.")
