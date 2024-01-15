@@ -2,9 +2,9 @@ import math
 from datetime import datetime
 
 #User entered data
-current_date = input("Date: ")
+current_date = input("Date, e.g. (2-14-24): ")
 current_latitude = int(input("Enter latitude: "))
-length_of_solar_panel = int(input("Enter length: "))
+length_of_solar_panel = int(input("Enter length of pivot point to connection of support on panel in inches: "))
 
 #To resolve date into Julien date
 current_date = datetime.strptime(current_date, '%m-%d-%y')
