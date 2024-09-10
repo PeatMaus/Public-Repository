@@ -181,7 +181,7 @@ def state_winner(player):
         color = BLACK
     font = pygame.font.Font('freesansbold.ttf', 15)
     text = font.render(f'Congratulations Player {player}, you are a Winner!!', False, color)
-    text1 = font.render(f"Restart game, press the 'esc' key", False, color)
+    text1 = font.render(f"To restart the game, please press the 'esc' key", False, color)
     textRect = text.get_rect()
     textRect1 = text1.get_rect()
     textRect.center = ((SCREEN_WIDTH)/2, SCREEN_HEIGHT - 435)
@@ -197,6 +197,8 @@ def state_winner(player):
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 return
+            elif event.key == pygame.K_BACKSPACE:
+                SystemExit
   
 def change_player(player):
     if player == 1:
