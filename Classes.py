@@ -27,12 +27,13 @@ john.number_of_eyes=4
 Abigal = Animals("Spider", "Abigal", 8)
 Abigal.number_of_eyes=10
 Abigal.type_of_feet("legs")
-
+Andi = Animals("Human", "Andrea", 2)
+Andi.type_of_feet("feet")
 
 john.description()
 alex.description()
 george.description()
 Abigal.description()
-
+Andi.description()
 
 
