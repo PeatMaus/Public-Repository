@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Menu</title>
+</head>
+<body>
+    <h1>Employee Menu</h1>
+    <form method="post">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Enter</button>
+    </form>
+    <h2>Inventory:</h2>
+    <ul>
+        {% for item in inventory %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Unavailable Toppings:</h2>
+    <ul>
+        {% for item in unavailable_toppings %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Manage Inventory:</h3>
+    <form method="post">
+        <label for="new_item">Add to Inventory:</label>
+        <input type="text" name="new_item" id="new_item">
+        <button type="submit" name="action" value="add_inventory">Add</button>
+    </form>
+    <form method="post">
+        <label for="remove_item">Remove from Inventory:</label>
+        <input type="text" name="remove_item" id="remove_item">
+        <button type="submit" name="action" value="remove_inventory">Remove</button>
+    </form>
+    <form method="post">
+        <label for="unavailable_item">Add to Unavailable:</label>
+        <input type="text" name="unavailable_item" id="unavailable_item">
+        <button type="submit" name="action" value="add_unavailable">Add</button>
+    </form>
+    <form method="post">
+        <label for="remove_unavailable_item">Remove from Unavailable:</label>
+        <input type="text" name="remove_unavailable_item" id="remove_unavailable_item">
+        <button type="submit" name="action" value="remove_unavailable">Remove</button>
+    </form>
+</body>
+</html>

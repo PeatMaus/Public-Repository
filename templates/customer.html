@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Menu</title>
+</head>
+<body>
+    <h1>Customer Menu</h1>
+    <form method="post">
+        <label for="topping">Add Topping:</label>
+        <input type="text" name="topping" id="topping" required>
+        <button type="submit" name="action" value="add">Add</button>
+    </form>
+    <form method="post">
+        <label for="topping">Remove Topping:</label>
+        <input type="text" name="topping" id="topping" required>
+        <button type="submit" name="action" value="remove">Remove</button>
+    </form>
+    <h2>Available Toppings:</h2>
+    <ul>
+        {% for item in inventory %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Your Toppings:</h2>
+    <ul>
+        {% for top in toppings %}
+            <li>{{ top }}</li>
+        {% endfor %}
+    </ul>
+    <form method="post">
+        <button type="submit" name="action" value="finish">Finish Ordering</button>
+    </form>
+</body>
+</html>
