@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish Ordering</title>
+</head>
+<body>
+    <h1>Order Completed</h1>
+    <h2>Your Pizza Toppings:</h2>
+    <ul>
+        {% for top in toppings %}
+            <li>{{ top }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Return to Home</a>
+</body>
+</html>
